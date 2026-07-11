@@ -20,8 +20,7 @@ import { SlideOverPanel } from '@/components/SlideOverPanel';
 import { SearchBar } from '@/components/SearchBar';
 import { SearchResultsDirect } from '@/components/SearchResultsDirect';
 
-const API_BASE = 'http://localhost:8000/api';
-
+const API_BASE = process.env.NEXT_PUBLIC_API_BASE_URL || "http://backend:8000/api";
 export default function Home() {
   const [summary, setSummary] = useState<any>(null);
   const [trends, setTrends] = useState<any>(null);
