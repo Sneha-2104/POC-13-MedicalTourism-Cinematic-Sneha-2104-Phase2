@@ -173,7 +173,7 @@ export function PatientExplorer() {
               <div className="grid grid-cols-1 md:grid-cols-3 gap-3 pt-3 border-t border-gray-800">
                 <div>
                   <label className="text-xs text-gray-400 block mb-1">Origin Country</label>
-                  <Select value={originFilter} onValueChange={setOriginFilter}>
+                  <Select value={originFilter} onValueChange={(value) => setOriginFilter(value ?? "")}>
                     <SelectTrigger className="bg-[#0A1628] border-gray-700 text-white">
                       <SelectValue placeholder="All Origins" />
                     </SelectTrigger>
@@ -188,7 +188,7 @@ export function PatientExplorer() {
 
                 <div>
                   <label className="text-xs text-gray-400 block mb-1">Destination</label>
-                  <Select value={destinationFilter} onValueChange={setDestinationFilter}>
+                  <Select value={destinationFilter} onValueChange={(value) => setDestinationFilter(value ?? "")}>
                     <SelectTrigger className="bg-[#0A1628] border-gray-700 text-white">
                       <SelectValue placeholder="All Destinations" />
                     </SelectTrigger>
@@ -203,7 +203,7 @@ export function PatientExplorer() {
 
                 <div>
                   <label className="text-xs text-gray-400 block mb-1">Specialty</label>
-                  <Select value={specialtyFilter} onValueChange={setSpecialtyFilter}>
+                  <Select value={specialtyFilter} onValueChange={(value) => setSpecialtyFilter(value ?? "")}>
                     <SelectTrigger className="bg-[#0A1628] border-gray-700 text-white">
                       <SelectValue placeholder="All Specialties" />
                     </SelectTrigger>
